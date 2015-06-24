@@ -32,7 +32,7 @@ public class Client implements Runnable {
 			org.omg.CosNaming.NamingContextExtHelper.narrow(obj);
 
 			// resolving servant name 
-			obj = ncRef.resolve_str("chatserver_yzioaw");
+			obj = ncRef.resolve_str("chatserver_iut");
 			ChatServer chatserver = ChatServerHelper.narrow(obj);
 
 			// creating servant
@@ -40,7 +40,7 @@ public class Client implements Runnable {
 			// connecting servant to ORB 
 			ChatClient chatclient = cc._this(orb);
 			Thread t = new Thread(new Client());
-			String id = chatserver.subscribe("test", chatclient);
+			String id = chatserver.subscribe("etudiant", chatclient);
 			try {
 				System.out.println("Connected with ID " + id);
 				System.out.println("Type /quit to exit");

@@ -28,7 +28,7 @@ public class Server {
 			// connecting servant to ORB 
 			ChatServer chatserver = cs._this(orb);
 			// binding servant reference to NameService
-			ncRef.rebind(ncRef.to_name("chatserver_yzioaw"), chatserver);
+			ncRef.rebind(ncRef.to_name("chatserver_iut"), chatserver);
 
 			System.out.println("Object activated");
 			// starting orb
